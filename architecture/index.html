@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/Osmedeus/images/favicon.png" type="image/png">
 
-    <title>Introduction :: Osmedeus Documentation</title>
+    <title>Architecture :: Osmedeus Documentation</title>
     <base href="https://j3ssie.github.io/Osmedeus/">
     
     <link href="/Osmedeus/css/nucleus.css?1565319885" rel="stylesheet">
@@ -35,7 +35,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/Osmedeus/introduction/">
+  <body class="" data-url="/Osmedeus/architecture/">
     <nav id="sidebar" class="">
 
 
@@ -76,8 +76,8 @@
   
     
     <li data-nav-id="/Osmedeus/introduction/" title="Introduction" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="/Osmedeus/introduction/">
@@ -374,8 +374,8 @@
   
     
     <li data-nav-id="/Osmedeus/architecture/" title="Architecture" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="/Osmedeus/architecture/">
@@ -471,7 +471,7 @@
             
           
           
-            <a href='/Osmedeus/'>Home</a> > Introduction
+            <a href='/Osmedeus/'>Home</a> > Architecture
           
          
           
@@ -486,8 +486,12 @@
 <ul>
 <li>
 <ul>
-<li><a href="#features">Features</a></li>
-<li><a href="#demo">Demo</a></li>
+<li>
+<ul>
+<li><a href="#the-architecture">The architecture</a></li>
+<li><a href="#flask-api-server">Flask API server</a></li>
+<li><a href="#python-client">Python client</a></li>
+</ul></li>
 </ul></li>
 </ul>
 </nav>
@@ -506,7 +510,7 @@
           
             <h1>
               
-              Introduction
+              Architecture
             </h1>
           
 
@@ -517,51 +521,47 @@
 
 	
 
-<p><img src="screenshots/Osmedeus-architecture.png?classes=border,shadow" alt="architechture" /></p>
+<p>Osmedeus basically split in two main part, Flask API server and python client.</p>
 
-<p align="center">
-Osmedeus allows you automated run the collection of awesome tools to reconnaissance and vulnerability scanning against the target.
-</p>
+<h3 id="the-architecture">The architecture</h3>
 
-<h2 id="features">Features</h2>
+<p>Normally, Osmedeus will run the subprocess <code>python3 core/app.py run</code> to start API server and continue as a python client.</p>
 
-<ul class="task-list">
-<li><label><input type="checkbox" checked disabled class="task-list-item"> Subdomain Scan.</label></li>
-<li><label><input type="checkbox" checked disabled class="task-list-item"> Subdomain TakeOver Scan.</label></li>
-<li><label><input type="checkbox" checked disabled class="task-list-item"> Screenshot the target.</label></li>
-<li><label><input type="checkbox" checked disabled class="task-list-item"> Basic recon like Whois, Dig info.</label></li>
-<li><label><input type="checkbox" checked disabled class="task-list-item"> Web Technology detection.</label></li>
-<li><label><input type="checkbox" checked disabled class="task-list-item"> IP Discovery.</label></li>
-<li><label><input type="checkbox" checked disabled class="task-list-item"> CORS Scan.</label></li>
-<li><label><input type="checkbox" checked disabled class="task-list-item"> SSL Scan.</label></li>
-<li><label><input type="checkbox" checked disabled class="task-list-item"> Wayback Machine Discovery.</label></li>
-<li><label><input type="checkbox" checked disabled class="task-list-item"> URL Discovery.</label></li>
-<li><label><input type="checkbox" checked disabled class="task-list-item"> Headers Scan.</label></li>
-<li><label><input type="checkbox" checked disabled class="task-list-item"> Port Scan.</label></li>
-<li><label><input type="checkbox" checked disabled class="task-list-item"> Vulnerable Scan.</label></li>
-<li><label><input type="checkbox" checked disabled class="task-list-item"> Seperate workspaces to store all scan output and details logging.</label></li>
-<li><label><input type="checkbox" checked disabled class="task-list-item"> REST API.</label></li>
-<li><label><input type="checkbox" checked disabled class="task-list-item"> React <a href="/web-ui/">Web UI</a>.</label></li>
-<li><label><input type="checkbox" checked disabled class="task-list-item"> Support Continuous Scan.</label></li>
-<li><label><input type="checkbox" checked disabled class="task-list-item"> Slack notifications.</label></li>
-<li><label><input type="checkbox" checked disabled class="task-list-item"> Easily view <a href="/advanced/report-mode/">report</a> from commnad line.</label></li>
-</ul>
+<p>But if you want to run it separately for remote purpose (<em>make sure you know what are you doing by config the <code>remote_api</code> in your <code>config.conf</code> file</em>) then just run</p>
 
-<h2 id="demo">Demo</h2>
+<pre><code>python3 core/app.py -b 0.0.0.0 -p 5000
+</code></pre>
 
-<p><a href="https://asciinema.org/a/230164"><img src="https://asciinema.org/a/230164.svg" alt="asciicast" /></a></p>
+<p>which is bind the server on all interface on local machine and port 5000.</p>
 
-<p><img src="https://raw.githubusercontent.com/j3ssie/Osmedeus/master/imgs/slack_noti.png?classes=border,shadow" alt="Slack Noti" /></p>
+<p>Highly recommend check out <a href="/installation/remote-setup/">Remote-Setup</a> for security concerns.</p>
 
-<p><img src="https://raw.githubusercontent.com/j3ssie/Osmedeus/master/imgs/slack_report.png?classes=border,shadow" alt="Slack Report" /></p>
+<hr />
 
-<p><img src="https://raw.githubusercontent.com/j3ssie/Osmedeus/master/imgs/osmedeus-report.png?classes=border,shadow" alt="Reports" /></p>
+<p>and run Osmedeus with &ndash;client options</p>
 
-<p><img src="https://raw.githubusercontent.com/j3ssie/Osmedeus/master/imgs/osmedeus-1.png?classes=border,shadow" alt="Web UI 1" /></p>
+<pre><code>./osmedeus -t example.com --client
+</code></pre>
 
-<p><img src="https://raw.githubusercontent.com/j3ssie/Osmedeus/master/imgs/osmedeus-3.png?classes=border,shadow" alt="Web UI 3" /></p>
+<hr />
 
-<p><img src="https://raw.githubusercontent.com/j3ssie/Osmedeus/master/imgs/osmedeus-2.png?classes=border,shadow" alt="Web UI 2" /></p>
+<h3 id="flask-api-server">Flask API server</h3>
+
+<p>Require <code>flask flask_restful flask_jwt flask_cors flask_jwt_extended</code> to run so make sure you installed those libraries before run</p>
+
+<p><code>python3 core/app.py</code></p>
+
+<p>Check out REST-API for all <a href="https://documenter.getpostman.com/view/7482578/S1a626XR?version=latest">endpoints</a>.</p>
+
+<hr />
+
+<h3 id="python-client">Python client</h3>
+
+<p>Require <code>requests</code> library to send request to the API server.</p>
+
+<p>Basically, this client will do the logic, parsing and storing the result in the workspace by running run the <a href="https://github.com/j3ssie/Osmedeus/blob/master/CREDITS.md">collection</a> of awesome tools against the target.</p>
+
+<p>The order of the logic is described in <code>core/routine.py</code> file.</p>
 
 
 
@@ -602,89 +602,8 @@ Osmedeus allows you automated run the collection of awesome tools to reconnaissa
             
                 
                     
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
                         
                         
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
                     
                 
                 
@@ -742,6 +661,86 @@ Osmedeus allows you automated run the collection of awesome tools to reconnaissa
             
         
                     
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
             
         
                     
@@ -814,6 +813,7 @@ Osmedeus allows you automated run the collection of awesome tools to reconnaissa
             
                 
                     
+                    
                 
                 
 
@@ -829,6 +829,9 @@ Osmedeus allows you automated run the collection of awesome tools to reconnaissa
             
             
                 
+                    
+                        
+                        
                     
                 
                 

@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/Osmedeus/images/favicon.png" type="image/png">
 
-    <title>Introduction :: Osmedeus Documentation</title>
+    <title>Direct Mode :: Osmedeus Documentation</title>
     <base href="https://j3ssie.github.io/Osmedeus/">
     
     <link href="/Osmedeus/css/nucleus.css?1565319885" rel="stylesheet">
@@ -35,7 +35,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/Osmedeus/introduction/">
+  <body class="" data-url="/Osmedeus/advanced/direct-mode/">
     <nav id="sidebar" class="">
 
 
@@ -76,8 +76,8 @@
   
     
     <li data-nav-id="/Osmedeus/introduction/" title="Introduction" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="/Osmedeus/introduction/">
@@ -209,7 +209,7 @@
   
     
     <li data-nav-id="/Osmedeus/advanced/" title="Advanced" class="dd-item 
-        
+        parent
         
         
         ">
@@ -252,7 +252,7 @@
  
   
     
-      <li data-nav-id="/Osmedeus/advanced/direct-mode/" title="Direct Mode" class="dd-item ">
+      <li data-nav-id="/Osmedeus/advanced/direct-mode/" title="Direct Mode" class="dd-item active">
         <a href="/Osmedeus/advanced/direct-mode/">
         Direct Mode
         
@@ -471,7 +471,13 @@
             
           
           
-            <a href='/Osmedeus/'>Home</a> > Introduction
+            
+            
+          
+          
+            <a href='/Osmedeus/'>Home</a> > <a href='/Osmedeus/advanced/'>Advanced</a> > Direct Mode
+          
+         
           
          
           
@@ -486,8 +492,17 @@
 <ul>
 <li>
 <ul>
-<li><a href="#features">Features</a></li>
-<li><a href="#demo">Demo</a></li>
+<li>
+<ul>
+<li><a href="#usage-of-direct-mode">Usage of Direct Mode</a>
+<ul>
+<li><a href="#modules-supported-direct-mode">Modules supported direct mode</a></li>
+<li><a href="#subdomain">Subdomain</a></li>
+<li><a href="#portscan-and-vulnscan">Portscan and VulnScan</a></li>
+<li><a href="#assetfinding-and-screenshot">AssetFinding and Screenshot</a></li>
+<li><a href="#gitscan-and-dirbscan">GitScan and DirbScan</a></li>
+</ul></li>
+</ul></li>
 </ul></li>
 </ul>
 </nav>
@@ -506,7 +521,7 @@
           
             <h1>
               
-              Introduction
+              Direct Mode
             </h1>
           
 
@@ -515,61 +530,67 @@
 
 
 
-	
 
-<p><img src="screenshots/Osmedeus-architecture.png?classes=border,shadow" alt="architechture" /></p>
+<h3 id="usage-of-direct-mode">Usage of Direct Mode</h3>
 
-<p align="center">
-Osmedeus allows you automated run the collection of awesome tools to reconnaissance and vulnerability scanning against the target.
-</p>
+<p>The goal of this mode is to create lots of advanced alias for your routine.</p>
 
-<h2 id="features">Features</h2>
+<pre><code>./osmedeus.py -m &lt;modules&gt; -i/-I single_input/list_of_inputs.txt [-t result_folder]  
+</code></pre>
 
-<ul class="task-list">
-<li><label><input type="checkbox" checked disabled class="task-list-item"> Subdomain Scan.</label></li>
-<li><label><input type="checkbox" checked disabled class="task-list-item"> Subdomain TakeOver Scan.</label></li>
-<li><label><input type="checkbox" checked disabled class="task-list-item"> Screenshot the target.</label></li>
-<li><label><input type="checkbox" checked disabled class="task-list-item"> Basic recon like Whois, Dig info.</label></li>
-<li><label><input type="checkbox" checked disabled class="task-list-item"> Web Technology detection.</label></li>
-<li><label><input type="checkbox" checked disabled class="task-list-item"> IP Discovery.</label></li>
-<li><label><input type="checkbox" checked disabled class="task-list-item"> CORS Scan.</label></li>
-<li><label><input type="checkbox" checked disabled class="task-list-item"> SSL Scan.</label></li>
-<li><label><input type="checkbox" checked disabled class="task-list-item"> Wayback Machine Discovery.</label></li>
-<li><label><input type="checkbox" checked disabled class="task-list-item"> URL Discovery.</label></li>
-<li><label><input type="checkbox" checked disabled class="task-list-item"> Headers Scan.</label></li>
-<li><label><input type="checkbox" checked disabled class="task-list-item"> Port Scan.</label></li>
-<li><label><input type="checkbox" checked disabled class="task-list-item"> Vulnerable Scan.</label></li>
-<li><label><input type="checkbox" checked disabled class="task-list-item"> Seperate workspaces to store all scan output and details logging.</label></li>
-<li><label><input type="checkbox" checked disabled class="task-list-item"> REST API.</label></li>
-<li><label><input type="checkbox" checked disabled class="task-list-item"> React <a href="/web-ui/">Web UI</a>.</label></li>
-<li><label><input type="checkbox" checked disabled class="task-list-item"> Support Continuous Scan.</label></li>
-<li><label><input type="checkbox" checked disabled class="task-list-item"> Slack notifications.</label></li>
-<li><label><input type="checkbox" checked disabled class="task-list-item"> Easily view <a href="/advanced/report-mode/">report</a> from commnad line.</label></li>
-</ul>
+<div class="notices tip" ><p>you can even use multiple modules by seperate it with <code>,</code>.</p>
+</div>
 
-<h2 id="demo">Demo</h2>
+<p>E.g: <code>./osmedeus.py -m &quot;portscan,vuln&quot; -I list_of_targets.txt -t output_folder</code></p>
 
-<p><a href="https://asciinema.org/a/230164"><img src="https://asciinema.org/a/230164.svg" alt="asciicast" /></a></p>
+<h4 id="modules-supported-direct-mode">Modules supported direct mode</h4>
 
-<p><img src="https://raw.githubusercontent.com/j3ssie/Osmedeus/master/imgs/slack_noti.png?classes=border,shadow" alt="Slack Noti" /></p>
+<pre><code>List module
+===========
+subdomain   - Scanning subdomain and subdomain takerover
+portscan    - Screenshot and Scanning service for list of domain
+screenshot  - Screenshot list of hosts
+asset       - Asset finding like URL, Wayback machine
+vuln        - Scanning version of services and checking vulnerable service
+git         - Scanning for git repo
+dirb        - Do directory search on the target
+</code></pre>
 
-<p><img src="https://raw.githubusercontent.com/j3ssie/Osmedeus/master/imgs/slack_report.png?classes=border,shadow" alt="Slack Report" /></p>
+<hr />
 
-<p><img src="https://raw.githubusercontent.com/j3ssie/Osmedeus/master/imgs/osmedeus-report.png?classes=border,shadow" alt="Reports" /></p>
+<h4 id="subdomain">Subdomain</h4>
 
-<p><img src="https://raw.githubusercontent.com/j3ssie/Osmedeus/master/imgs/osmedeus-1.png?classes=border,shadow" alt="Web UI 1" /></p>
+<p>This module not required input options (-i/-I).</p>
 
-<p><img src="https://raw.githubusercontent.com/j3ssie/Osmedeus/master/imgs/osmedeus-3.png?classes=border,shadow" alt="Web UI 3" /></p>
+<pre><code>./osmedeus.py -m subdomain -t example.com
+./osmedeus.py -m subdomain -t example.com --slow 'subdomain'
+</code></pre>
 
-<p><img src="https://raw.githubusercontent.com/j3ssie/Osmedeus/master/imgs/osmedeus-2.png?classes=border,shadow" alt="Web UI 2" /></p>
+<h4 id="portscan-and-vulnscan">Portscan and VulnScan</h4>
 
+<pre><code>./osmedeus.py -m portscan -i &quot;1.2.3.4/24&quot;
+./osmedeus.py -m portscan -I list_of_targets.txt
+./osmedeus.py -m &quot;portscan,vuln&quot; -I list_of_targets.txt -t output_folder
+</code></pre>
 
+<h4 id="assetfinding-and-screenshot">AssetFinding and Screenshot</h4>
 
+<pre><code>./osmedeus.py -m asset -i &quot;github.com&quot; -t &quot;result_folder&quot;
+./osmedeus.py -m &quot;asset,screen&quot; -I list_of_targets.txt
+</code></pre>
+
+<h4 id="gitscan-and-dirbscan">GitScan and DirbScan</h4>
+
+<pre><code>./osmedeus.py -m git -i https://github.com/do_not/try_my_repo -t sample1
+./osmedeus.py -m dirb -I /tmp/list_of_hosts.txt -t sample2
+
+</code></pre>
 
 
 <footer class=" footline" >
 	
 </footer>
+
 
         
         </div> 
@@ -602,89 +623,8 @@ Osmedeus allows you automated run the collection of awesome tools to reconnaissa
             
                 
                     
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
                         
                         
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
                     
                 
                 
@@ -742,6 +682,22 @@ Osmedeus allows you automated run the collection of awesome tools to reconnaissa
             
         
                     
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
             
         
                     
@@ -749,6 +705,78 @@ Osmedeus allows you automated run the collection of awesome tools to reconnaissa
             
             
                 
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
                     
                 
                 
@@ -877,3 +905,4 @@ Osmedeus allows you automated run the collection of awesome tools to reconnaissa
 
   </body>
 </html>
+

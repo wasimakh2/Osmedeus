@@ -12,6 +12,18 @@
     
     
     <item>
+      <title>Docker Setup</title>
+      <link>https://j3ssie.github.io/Osmedeus/installation/docker-setup/</link>
+      <pubDate>Thu, 08 Aug 2019 21:30:23 +0700</pubDate>
+      
+      <guid>https://j3ssie.github.io/Osmedeus/installation/docker-setup/</guid>
+      <description>Using Docker Check out docker-osmedeus by mabnavarrete for docker installation.
+TL;DR Run this command to pull container and install Osmedeus.
+Installation docker run -d --net host --name osmedeus mablanco/osmedeus  Simple usage docker exec -it osmedeus ./osmedeus.py --client -t example.com  or access container through bash then navigate to ~/ and you&amp;rsquo;re good to go.
+docker exec -it osmedeus /bin/bash -i  Access the UI Credentials by default will place in ~/.</description>
+    </item>
+    
+    <item>
       <title>Remote Setup</title>
       <link>https://j3ssie.github.io/Osmedeus/installation/remote-setup/</link>
       <pubDate>Thu, 08 Aug 2019 21:30:31 +0700</pubDate>
@@ -21,6 +33,21 @@
 python3 core/app.py -b 0.0.0.0 -p 5000  or
 Because this API allows executing command on your server so by default it only allows execute command from localhost so if you specify --remote It&amp;rsquo;s will remove local protection on that API.
 python3 core/app.py -b 0.0.0.0 -p 5000 --remote  Web UI connect Connect your UI to API Server.</description>
+    </item>
+    
+    <item>
+      <title>Slack Config</title>
+      <link>https://j3ssie.github.io/Osmedeus/installation/slack-config/</link>
+      <pubDate>Thu, 08 Aug 2019 21:51:02 +0700</pubDate>
+      
+      <guid>https://j3ssie.github.io/Osmedeus/installation/slack-config/</guid>
+      <description>This is optional config you don&amp;rsquo;t have to do this to get the tools done.
+You can only provide REPORT_CHANNEL and SLACK_BOT_TOKEN to get less verbose noti.
+ STATUS_CHANNEL is the place to put notifications.
+REPORT_CHANNEL is the place to put output file.
+LOG_CHANNEL is the place to put command was executed.
+STDS_CHANNEL is the place to put all stdout.
+SLACK_BOT_TOKEN is bot API or user API token that have permission to access channel above.</description>
     </item>
     
   </channel>

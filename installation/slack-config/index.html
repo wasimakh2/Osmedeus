@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/Osmedeus/images/favicon.png" type="image/png">
 
-    <title>Introduction :: Osmedeus Documentation</title>
+    <title>Slack Config :: Osmedeus Documentation</title>
     <base href="https://j3ssie.github.io/Osmedeus/">
     
     <link href="/Osmedeus/css/nucleus.css?1565319885" rel="stylesheet">
@@ -35,7 +35,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/Osmedeus/introduction/">
+  <body class="" data-url="/Osmedeus/installation/slack-config/">
     <nav id="sidebar" class="">
 
 
@@ -76,8 +76,8 @@
   
     
     <li data-nav-id="/Osmedeus/introduction/" title="Introduction" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="/Osmedeus/introduction/">
@@ -98,7 +98,7 @@
   
     
     <li data-nav-id="/Osmedeus/installation/" title="Installation" class="dd-item 
-        
+        parent
         
         
         ">
@@ -160,7 +160,7 @@
  
   
     
-      <li data-nav-id="/Osmedeus/installation/slack-config/" title="Slack Config" class="dd-item ">
+      <li data-nav-id="/Osmedeus/installation/slack-config/" title="Slack Config" class="dd-item active">
         <a href="/Osmedeus/installation/slack-config/">
         Slack Config
         
@@ -471,7 +471,13 @@
             
           
           
-            <a href='/Osmedeus/'>Home</a> > Introduction
+            
+            
+          
+          
+            <a href='/Osmedeus/'>Home</a> > <a href='/Osmedeus/installation/'>Installation</a> > Slack Config
+          
+         
           
          
           
@@ -482,15 +488,7 @@
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#features">Features</a></li>
-<li><a href="#demo">Demo</a></li>
-</ul></li>
-</ul>
-</nav>
+
     </div>
 </div>
 
@@ -506,7 +504,7 @@
           
             <h1>
               
-              Introduction
+              Slack Config
             </h1>
           
 
@@ -514,62 +512,35 @@
 
 
 
+<p>This is optional config you don&rsquo;t have to do this to get the tools done.</p>
 
-	
+<div class="notices tip" ><p>You can only provide <strong>REPORT_CHANNEL</strong> and <strong>SLACK_BOT_TOKEN</strong> to get less verbose noti.</p>
+</div>
 
-<p><img src="screenshots/Osmedeus-architecture.png?classes=border,shadow" alt="architechture" /></p>
+<p><strong>STATUS_CHANNEL</strong> is the place to put notifications.</p>
 
-<p align="center">
-Osmedeus allows you automated run the collection of awesome tools to reconnaissance and vulnerability scanning against the target.
-</p>
+<p><strong>REPORT_CHANNEL</strong> is the place to put output file.</p>
 
-<h2 id="features">Features</h2>
+<p><strong>LOG_CHANNEL</strong> is the place to put command was executed.</p>
 
-<ul class="task-list">
-<li><label><input type="checkbox" checked disabled class="task-list-item"> Subdomain Scan.</label></li>
-<li><label><input type="checkbox" checked disabled class="task-list-item"> Subdomain TakeOver Scan.</label></li>
-<li><label><input type="checkbox" checked disabled class="task-list-item"> Screenshot the target.</label></li>
-<li><label><input type="checkbox" checked disabled class="task-list-item"> Basic recon like Whois, Dig info.</label></li>
-<li><label><input type="checkbox" checked disabled class="task-list-item"> Web Technology detection.</label></li>
-<li><label><input type="checkbox" checked disabled class="task-list-item"> IP Discovery.</label></li>
-<li><label><input type="checkbox" checked disabled class="task-list-item"> CORS Scan.</label></li>
-<li><label><input type="checkbox" checked disabled class="task-list-item"> SSL Scan.</label></li>
-<li><label><input type="checkbox" checked disabled class="task-list-item"> Wayback Machine Discovery.</label></li>
-<li><label><input type="checkbox" checked disabled class="task-list-item"> URL Discovery.</label></li>
-<li><label><input type="checkbox" checked disabled class="task-list-item"> Headers Scan.</label></li>
-<li><label><input type="checkbox" checked disabled class="task-list-item"> Port Scan.</label></li>
-<li><label><input type="checkbox" checked disabled class="task-list-item"> Vulnerable Scan.</label></li>
-<li><label><input type="checkbox" checked disabled class="task-list-item"> Seperate workspaces to store all scan output and details logging.</label></li>
-<li><label><input type="checkbox" checked disabled class="task-list-item"> REST API.</label></li>
-<li><label><input type="checkbox" checked disabled class="task-list-item"> React <a href="/web-ui/">Web UI</a>.</label></li>
-<li><label><input type="checkbox" checked disabled class="task-list-item"> Support Continuous Scan.</label></li>
-<li><label><input type="checkbox" checked disabled class="task-list-item"> Slack notifications.</label></li>
-<li><label><input type="checkbox" checked disabled class="task-list-item"> Easily view <a href="/advanced/report-mode/">report</a> from commnad line.</label></li>
-</ul>
+<p><strong>STDS_CHANNEL</strong> is the place to put all stdout.</p>
 
-<h2 id="demo">Demo</h2>
+<p><strong>SLACK_BOT_TOKEN</strong> is bot API or user API token that have permission to access channel above.</p>
 
-<p><a href="https://asciinema.org/a/230164"><img src="https://asciinema.org/a/230164.svg" alt="asciicast" /></a></p>
+<pre><code>export LOG_CHANNEL=CGXXXXXX
+export STATUS_CHANNEL=CGXXXXXX
+export REPORT_CHANNEL=CGXXXXXX
+export STDS_CHANNEL=CGXXXXXXX
+export SLACK_BOT_TOKEN=xoxb-11
+</code></pre>
 
-<p><img src="https://raw.githubusercontent.com/j3ssie/Osmedeus/master/imgs/slack_noti.png?classes=border,shadow" alt="Slack Noti" /></p>
-
-<p><img src="https://raw.githubusercontent.com/j3ssie/Osmedeus/master/imgs/slack_report.png?classes=border,shadow" alt="Slack Report" /></p>
-
-<p><img src="https://raw.githubusercontent.com/j3ssie/Osmedeus/master/imgs/osmedeus-report.png?classes=border,shadow" alt="Reports" /></p>
-
-<p><img src="https://raw.githubusercontent.com/j3ssie/Osmedeus/master/imgs/osmedeus-1.png?classes=border,shadow" alt="Web UI 1" /></p>
-
-<p><img src="https://raw.githubusercontent.com/j3ssie/Osmedeus/master/imgs/osmedeus-3.png?classes=border,shadow" alt="Web UI 3" /></p>
-
-<p><img src="https://raw.githubusercontent.com/j3ssie/Osmedeus/master/imgs/osmedeus-2.png?classes=border,shadow" alt="Web UI 2" /></p>
-
-
-
+<p>Add those line above to your <code>~/.bashrc</code> or <code>~/.zshrc</code> or whatever of yours and Osmedeus auto pickup these environment variables and add to config file or you have to edit manually in your <code>config.conf</code> file</p>
 
 
 <footer class=" footline" >
 	
 </footer>
+
 
         
         </div> 
@@ -602,6 +573,8 @@ Osmedeus allows you automated run the collection of awesome tools to reconnaissa
             
                 
                     
+                        
+                        
                     
                 
                 
@@ -619,8 +592,6 @@ Osmedeus allows you automated run the collection of awesome tools to reconnaissa
             
                 
                     
-                        
-                        
                     
                 
                 
@@ -635,21 +606,8 @@ Osmedeus allows you automated run the collection of awesome tools to reconnaissa
             
                 
                     
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
                         
-            
-            
-                
+                        
                     
                 
                 
@@ -678,6 +636,23 @@ Osmedeus allows you automated run the collection of awesome tools to reconnaissa
             
         
                     
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
             
         
                     
@@ -685,6 +660,9 @@ Osmedeus allows you automated run the collection of awesome tools to reconnaissa
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -877,3 +855,4 @@ Osmedeus allows you automated run the collection of awesome tools to reconnaissa
 
   </body>
 </html>
+

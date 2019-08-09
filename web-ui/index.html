@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/Osmedeus/images/favicon.png" type="image/png">
 
-    <title>Introduction :: Osmedeus Documentation</title>
+    <title>Web UI :: Osmedeus Documentation</title>
     <base href="https://j3ssie.github.io/Osmedeus/">
     
     <link href="/Osmedeus/css/nucleus.css?1565319885" rel="stylesheet">
@@ -35,7 +35,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/Osmedeus/introduction/">
+  <body class="" data-url="/Osmedeus/web-ui/">
     <nav id="sidebar" class="">
 
 
@@ -76,8 +76,8 @@
   
     
     <li data-nav-id="/Osmedeus/introduction/" title="Introduction" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="/Osmedeus/introduction/">
@@ -279,8 +279,8 @@
   
     
     <li data-nav-id="/Osmedeus/web-ui/" title="Web UI" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="/Osmedeus/web-ui/">
@@ -471,7 +471,7 @@
             
           
           
-            <a href='/Osmedeus/'>Home</a> > Introduction
+            <a href='/Osmedeus/'>Home</a> > Web UI
           
          
           
@@ -486,8 +486,15 @@
 <ul>
 <li>
 <ul>
-<li><a href="#features">Features</a></li>
-<li><a href="#demo">Demo</a></li>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#local">Local</a></li>
+<li><a href="#remote">Remote</a></li>
+</ul></li>
+<li><a href="#credits">Credits</a></li>
+</ul></li>
 </ul></li>
 </ul>
 </nav>
@@ -506,7 +513,7 @@
           
             <h1>
               
-              Introduction
+              Web UI
             </h1>
           
 
@@ -517,51 +524,34 @@
 
 	
 
-<p><img src="screenshots/Osmedeus-architecture.png?classes=border,shadow" alt="architechture" /></p>
+<div class="notices note" ><p>Note that we&rsquo;re using self-signed certificate so make sure you trust that and access via <strong>HTTPS</strong>.</p>
+</div>
 
-<p align="center">
-Osmedeus allows you automated run the collection of awesome tools to reconnaissance and vulnerability scanning against the target.
-</p>
+<p><img src="https://user-images.githubusercontent.com/23289085/62714231-5a6c0e80-ba28-11e9-9f9b-d2b202808cb8.png?classes=border,shadow" alt="CA Warning" /></p>
 
-<h2 id="features">Features</h2>
+<p><img src="https://user-images.githubusercontent.com/23289085/62714564-06adf500-ba29-11e9-989d-1bc62b210bde.png?classes=border,shadow" alt="Login" /></p>
 
-<ul class="task-list">
-<li><label><input type="checkbox" checked disabled class="task-list-item"> Subdomain Scan.</label></li>
-<li><label><input type="checkbox" checked disabled class="task-list-item"> Subdomain TakeOver Scan.</label></li>
-<li><label><input type="checkbox" checked disabled class="task-list-item"> Screenshot the target.</label></li>
-<li><label><input type="checkbox" checked disabled class="task-list-item"> Basic recon like Whois, Dig info.</label></li>
-<li><label><input type="checkbox" checked disabled class="task-list-item"> Web Technology detection.</label></li>
-<li><label><input type="checkbox" checked disabled class="task-list-item"> IP Discovery.</label></li>
-<li><label><input type="checkbox" checked disabled class="task-list-item"> CORS Scan.</label></li>
-<li><label><input type="checkbox" checked disabled class="task-list-item"> SSL Scan.</label></li>
-<li><label><input type="checkbox" checked disabled class="task-list-item"> Wayback Machine Discovery.</label></li>
-<li><label><input type="checkbox" checked disabled class="task-list-item"> URL Discovery.</label></li>
-<li><label><input type="checkbox" checked disabled class="task-list-item"> Headers Scan.</label></li>
-<li><label><input type="checkbox" checked disabled class="task-list-item"> Port Scan.</label></li>
-<li><label><input type="checkbox" checked disabled class="task-list-item"> Vulnerable Scan.</label></li>
-<li><label><input type="checkbox" checked disabled class="task-list-item"> Seperate workspaces to store all scan output and details logging.</label></li>
-<li><label><input type="checkbox" checked disabled class="task-list-item"> REST API.</label></li>
-<li><label><input type="checkbox" checked disabled class="task-list-item"> React <a href="/web-ui/">Web UI</a>.</label></li>
-<li><label><input type="checkbox" checked disabled class="task-list-item"> Support Continuous Scan.</label></li>
-<li><label><input type="checkbox" checked disabled class="task-list-item"> Slack notifications.</label></li>
-<li><label><input type="checkbox" checked disabled class="task-list-item"> Easily view <a href="/advanced/report-mode/">report</a> from commnad line.</label></li>
+<h4 id="local">Local</h4>
+
+<p>If you&rsquo;re run Osmedeus on the local machine just access <a href="https://127.0.0.1:5000">https://127.0.0.1:5000</a> and fill the credentials from your <code>config.conf</code> file. (by default, it&rsquo;s on <code>~/.osmedeus/config.conf</code>)</p>
+
+<hr />
+
+<h4 id="remote">Remote</h4>
+
+<p>If you&rsquo;re run Osmedeus server and client separately, you gonna need to change <strong>Remote URL</strong> in the login sections on the Web UI.</p>
+
+<p><img src="https://user-images.githubusercontent.com/23289085/62714373-a1f29a80-ba28-11e9-8acc-afbb47bed6bf.png?classes=border,shadow" alt="Web UI" /></p>
+
+<p>Check out this wiki for more <a href="/architecture/">details</a> about running remote Osmedeus.</p>
+
+<h3 id="credits">Credits</h3>
+
+<ul>
+<li><p>React components is powered by <a href="https://www.carbondesignsystem.com/">Carbon</a> and <a href="https://github.com/carbon-design-system/carbon-tutorial">carbon-tutorial</a>.</p></li>
+
+<li><p>Awesomes artworks are powered by <a href="http://freepik.com">Freepik</a> at <a href="http://flaticon.com">flaticon.com</a>.</p></li>
 </ul>
-
-<h2 id="demo">Demo</h2>
-
-<p><a href="https://asciinema.org/a/230164"><img src="https://asciinema.org/a/230164.svg" alt="asciicast" /></a></p>
-
-<p><img src="https://raw.githubusercontent.com/j3ssie/Osmedeus/master/imgs/slack_noti.png?classes=border,shadow" alt="Slack Noti" /></p>
-
-<p><img src="https://raw.githubusercontent.com/j3ssie/Osmedeus/master/imgs/slack_report.png?classes=border,shadow" alt="Slack Report" /></p>
-
-<p><img src="https://raw.githubusercontent.com/j3ssie/Osmedeus/master/imgs/osmedeus-report.png?classes=border,shadow" alt="Reports" /></p>
-
-<p><img src="https://raw.githubusercontent.com/j3ssie/Osmedeus/master/imgs/osmedeus-1.png?classes=border,shadow" alt="Web UI 1" /></p>
-
-<p><img src="https://raw.githubusercontent.com/j3ssie/Osmedeus/master/imgs/osmedeus-3.png?classes=border,shadow" alt="Web UI 3" /></p>
-
-<p><img src="https://raw.githubusercontent.com/j3ssie/Osmedeus/master/imgs/osmedeus-2.png?classes=border,shadow" alt="Web UI 2" /></p>
 
 
 
@@ -602,89 +592,8 @@ Osmedeus allows you automated run the collection of awesome tools to reconnaissa
             
                 
                     
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
                         
                         
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
                     
                 
                 
@@ -742,6 +651,38 @@ Osmedeus allows you automated run the collection of awesome tools to reconnaissa
             
         
                     
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
             
         
                     
@@ -762,6 +703,58 @@ Osmedeus allows you automated run the collection of awesome tools to reconnaissa
             
             
                 
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
                     
                 
                 

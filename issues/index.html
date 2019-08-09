@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/Osmedeus/images/favicon.png" type="image/png">
 
-    <title>Introduction :: Osmedeus Documentation</title>
+    <title>Common Issues :: Osmedeus Documentation</title>
     <base href="https://j3ssie.github.io/Osmedeus/">
     
     <link href="/Osmedeus/css/nucleus.css?1565319885" rel="stylesheet">
@@ -35,7 +35,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/Osmedeus/introduction/">
+  <body class="" data-url="/Osmedeus/issues/">
     <nav id="sidebar" class="">
 
 
@@ -76,8 +76,8 @@
   
     
     <li data-nav-id="/Osmedeus/introduction/" title="Introduction" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="/Osmedeus/introduction/">
@@ -330,8 +330,8 @@
   
     
     <li data-nav-id="/Osmedeus/issues/" title="Common Issues" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="/Osmedeus/issues/">
@@ -471,7 +471,7 @@
             
           
           
-            <a href='/Osmedeus/'>Home</a> > Introduction
+            <a href='/Osmedeus/'>Home</a> > Common Issues
           
          
           
@@ -486,8 +486,14 @@
 <ul>
 <li>
 <ul>
-<li><a href="#features">Features</a></li>
-<li><a href="#demo">Demo</a></li>
+<li>
+<ul>
+<li><a href="#flask-api-error">Flask API error</a>
+<ul>
+<li><a href="#solution">Solution</a></li>
+</ul></li>
+<li><a href="#for-running-error">For running Error</a></li>
+</ul></li>
 </ul></li>
 </ul>
 </nav>
@@ -506,7 +512,7 @@
           
             <h1>
               
-              Introduction
+              Common Issues
             </h1>
           
 
@@ -517,51 +523,36 @@
 
 	
 
-<p><img src="screenshots/Osmedeus-architecture.png?classes=border,shadow" alt="architechture" /></p>
+<p>Currently Osmedeus will not support Windows so any issue about this OS will not support.</p>
 
-<p align="center">
-Osmedeus allows you automated run the collection of awesome tools to reconnaissance and vulnerability scanning against the target.
-</p>
+<hr />
 
-<h2 id="features">Features</h2>
+<h3 id="flask-api-error">Flask API error</h3>
 
-<ul class="task-list">
-<li><label><input type="checkbox" checked disabled class="task-list-item"> Subdomain Scan.</label></li>
-<li><label><input type="checkbox" checked disabled class="task-list-item"> Subdomain TakeOver Scan.</label></li>
-<li><label><input type="checkbox" checked disabled class="task-list-item"> Screenshot the target.</label></li>
-<li><label><input type="checkbox" checked disabled class="task-list-item"> Basic recon like Whois, Dig info.</label></li>
-<li><label><input type="checkbox" checked disabled class="task-list-item"> Web Technology detection.</label></li>
-<li><label><input type="checkbox" checked disabled class="task-list-item"> IP Discovery.</label></li>
-<li><label><input type="checkbox" checked disabled class="task-list-item"> CORS Scan.</label></li>
-<li><label><input type="checkbox" checked disabled class="task-list-item"> SSL Scan.</label></li>
-<li><label><input type="checkbox" checked disabled class="task-list-item"> Wayback Machine Discovery.</label></li>
-<li><label><input type="checkbox" checked disabled class="task-list-item"> URL Discovery.</label></li>
-<li><label><input type="checkbox" checked disabled class="task-list-item"> Headers Scan.</label></li>
-<li><label><input type="checkbox" checked disabled class="task-list-item"> Port Scan.</label></li>
-<li><label><input type="checkbox" checked disabled class="task-list-item"> Vulnerable Scan.</label></li>
-<li><label><input type="checkbox" checked disabled class="task-list-item"> Seperate workspaces to store all scan output and details logging.</label></li>
-<li><label><input type="checkbox" checked disabled class="task-list-item"> REST API.</label></li>
-<li><label><input type="checkbox" checked disabled class="task-list-item"> React <a href="/web-ui/">Web UI</a>.</label></li>
-<li><label><input type="checkbox" checked disabled class="task-list-item"> Support Continuous Scan.</label></li>
-<li><label><input type="checkbox" checked disabled class="task-list-item"> Slack notifications.</label></li>
-<li><label><input type="checkbox" checked disabled class="task-list-item"> Easily view <a href="/advanced/report-mode/">report</a> from commnad line.</label></li>
-</ul>
+<pre><code>[-] Fail to set config, Something went from with Flask API !!!
+</code></pre>
 
-<h2 id="demo">Demo</h2>
+<h4 id="solution">Solution</h4>
 
-<p><a href="https://asciinema.org/a/230164"><img src="https://asciinema.org/a/230164.svg" alt="asciicast" /></a></p>
+<p>Make sure you&rsquo;re installed Flask stuff via <strong>python 3.6+</strong> by this command</p>
 
-<p><img src="https://raw.githubusercontent.com/j3ssie/Osmedeus/master/imgs/slack_noti.png?classes=border,shadow" alt="Slack Noti" /></p>
+<pre><code>pip3 install flask flask_restful flask_jwt flask_cors flask_jwt_extended ansi2html
+</code></pre>
 
-<p><img src="https://raw.githubusercontent.com/j3ssie/Osmedeus/master/imgs/slack_report.png?classes=border,shadow" alt="Slack Report" /></p>
+<p>then manually verify that by run the Flask API indepenently.</p>
 
-<p><img src="https://raw.githubusercontent.com/j3ssie/Osmedeus/master/imgs/osmedeus-report.png?classes=border,shadow" alt="Reports" /></p>
+<pre><code>python3 core/app.py
+</code></pre>
 
-<p><img src="https://raw.githubusercontent.com/j3ssie/Osmedeus/master/imgs/osmedeus-1.png?classes=border,shadow" alt="Web UI 1" /></p>
+<p>test if it&rsquo;s worked by using this commnad <code>curl -k https://127.0.0.1:5000</code></p>
 
-<p><img src="https://raw.githubusercontent.com/j3ssie/Osmedeus/master/imgs/osmedeus-3.png?classes=border,shadow" alt="Web UI 3" /></p>
+<hr />
 
-<p><img src="https://raw.githubusercontent.com/j3ssie/Osmedeus/master/imgs/osmedeus-2.png?classes=border,shadow" alt="Web UI 2" /></p>
+<h3 id="for-running-error">For running Error</h3>
+
+<p>Osmedeus support Continuous scan so you just have to <strong>Ctrl+C</strong> and run exactly your previous command it&rsquo;s gonna resume the scan.</p>
+
+<p>If try all method above but still have error just open new issue.</p>
 
 
 
@@ -602,89 +593,8 @@ Osmedeus allows you automated run the collection of awesome tools to reconnaissa
             
                 
                     
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
                         
                         
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
                     
                 
                 
@@ -742,6 +652,86 @@ Osmedeus allows you automated run the collection of awesome tools to reconnaissa
             
         
                     
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
             
         
                     
@@ -782,6 +772,7 @@ Osmedeus allows you automated run the collection of awesome tools to reconnaissa
             
                 
                     
+                    
                 
                 
 
@@ -797,6 +788,9 @@ Osmedeus allows you automated run the collection of awesome tools to reconnaissa
             
             
                 
+                    
+                        
+                        
                     
                 
                 

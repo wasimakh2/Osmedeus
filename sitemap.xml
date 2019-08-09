@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://j3ssie.github.io/Osmedeus/installation/docker-setup/</loc>
+    <lastmod>2019-08-08T21:30:23+07:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://j3ssie.github.io/Osmedeus/introduction/</loc>
     <lastmod>2019-07-31T13:03:29+07:00</lastmod>
   </url>
@@ -18,8 +23,53 @@
   </url>
   
   <url>
+    <loc>https://j3ssie.github.io/Osmedeus/installation/slack-config/</loc>
+    <lastmod>2019-08-08T21:51:02+07:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://j3ssie.github.io/Osmedeus/usage/</loc>
     <lastmod>2019-07-31T13:44:32+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://j3ssie.github.io/Osmedeus/advanced/</loc>
+    <lastmod>2019-08-08T21:45:43+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://j3ssie.github.io/Osmedeus/web-ui/</loc>
+    <lastmod>2019-08-08T21:13:31+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://j3ssie.github.io/Osmedeus/web-ui/features/</loc>
+    <lastmod>2019-08-08T22:14:29+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://j3ssie.github.io/Osmedeus/advanced/report-mode/</loc>
+    <lastmod>2019-08-08T21:47:55+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://j3ssie.github.io/Osmedeus/advanced/direct-mode/</loc>
+    <lastmod>2019-08-08T21:44:32+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://j3ssie.github.io/Osmedeus/issues/</loc>
+    <lastmod>2019-08-08T21:14:11+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://j3ssie.github.io/Osmedeus/showcases/</loc>
+    <lastmod>2019-08-08T21:13:53+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://j3ssie.github.io/Osmedeus/architecture/</loc>
+    <lastmod>2019-08-08T21:13:44+07:00</lastmod>
   </url>
   
   <url>
