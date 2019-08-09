@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Home on Osmedeus Documentation</title>
+    <link>https://j3ssie.github.io/Osmedeus/</link>
+    <description>Recent content in Home on Osmedeus Documentation</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 30 Jul 2019 22:50:41 +0700</lastBuildDate>
+    
+	<atom:link href="https://j3ssie.github.io/Osmedeus/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Remote Setup</title>
+      <link>https://j3ssie.github.io/Osmedeus/installation/remote-setup/</link>
+      <pubDate>Thu, 08 Aug 2019 21:30:31 +0700</pubDate>
+      
+      <guid>https://j3ssie.github.io/Osmedeus/installation/remote-setup/</guid>
+      <description>Setup Flask API server on remote server. Allow Web UI access from remote but do not allow run command directly on it.
+python3 core/app.py -b 0.0.0.0 -p 5000  or
+Because this API allows executing command on your server so by default it only allows execute command from localhost so if you specify --remote It&amp;rsquo;s will remove local protection on that API.
+python3 core/app.py -b 0.0.0.0 -p 5000 --remote  Web UI connect Connect your UI to API Server.</description>
+    </item>
+    
+  </channel>
+</rss>

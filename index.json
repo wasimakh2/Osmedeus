@@ -1,0 +1,57 @@
+[
+{
+	"uri": "https://j3ssie.github.io/Osmedeus/introduction/",
+	"title": "Introduction",
+	"tags": [],
+	"description": "",
+	"content": " Osmedeus allows you automated run the collection of awesome tools to reconnaissance and vulnerability scanning against the target. Features Subdomain Scan. Subdomain TakeOver Scan. Screenshot the target. Basic recon like Whois, Dig info. Web Technology detection. IP Discovery. CORS Scan. SSL Scan. Wayback Machine Discovery. URL Discovery. Headers Scan. Port Scan. Vulnerable Scan. Seperate workspaces to store all scan output and details logging. REST API. React Web UI. Support Continuous Scan. Slack notifications. Easily view report from commnad line.  Demo \n"
+},
+{
+	"uri": "https://j3ssie.github.io/Osmedeus/installation/remote-setup/",
+	"title": "Remote Setup",
+	"tags": [],
+	"description": "",
+	"content": " Setup Flask API server on remote server. Allow Web UI access from remote but do not allow run command directly on it.\npython3 core/app.py -b 0.0.0.0 -p 5000  or\nBecause this API allows executing command on your server so by default it only allows execute command from localhost so if you specify --remote It\u0026rsquo;s will remove local protection on that API.\npython3 core/app.py -b 0.0.0.0 -p 5000 --remote  Web UI connect Connect your UI to API Server.\nRunning Osmedeus Protips: --auth=\u0026quot;username:password\u0026quot; using this option for custom credentials.\nAccess the remote server and do screen or tmux then run ./osmedeus.py -t example.com --client  or\n./osmedeus.py -t example.com --client --remote https://yourserver.com:5000  Beautify Postman dashboard Full API Endpoint will be updated here.\n**Note that duckduckgo.com is an example target, replace it depending on your target.**\nAPI Config You gonna need JWT token to reach out the endpoints. But first, we gonna need to define the credentials to verify the authentication process. So check out the login API first\nSecurity concern Protips: you can access the UI or even the API safe by using ssh forwarding using this command (make sure you\u0026rsquo;re enable GatewayPorts yes in your /etc/ssh/sshd_config)\nssh -L 5000:localhost:5000 root@your_remote_server  Because this API allows executing command on your server so @local_only and @jwt_required decorators on core endpoints are really important.\nIf you wanna run it remote just remove @local_only decorators or run the server with --remote options but make sure you know that are you doing.\nOthers best practice Make sure change JWT_SECRET_KEY and the CORS origin on core/app.py to where you host the UI.\n#just for testing whitelist your domain if you wanna run this server remotely cors = CORS(app, resources={r\u0026quot;/*\u0026quot;: {\u0026quot;origins\u0026quot;: \u0026quot;*\u0026quot;}}) ... # setup jwt secret, make sure you change this! app.config['JWT_SECRET_KEY'] = '-----BEGIN RSA PRIVATE KEY-----' # go ahead, spider  Create your own certificate. Navigate to core/certs delete cert.pem and key.pem in this folder and create your own cert by this command below.\nopenssl req -x509 -newkey rsa:4096 -nodes -out cert.pem -keyout key.pem -days 365  "
+},
+{
+	"uri": "https://j3ssie.github.io/Osmedeus/installation/",
+	"title": "Installation",
+	"tags": [],
+	"description": "",
+	"content": " Video Guide\nFor Kali Linux git clone https://github.com/j3ssie/Osmedeus cd Osmedeus ./install.sh  For *nix OS Change default shell and package manager on top of the install file and you will be fine to run.\ngit clone https://github.com/j3ssie/Osmedeus cd Osmedeus ./install.sh  For MacOS Install golang officially or use homebrew and nmap, masscan. Change default shell and package manager on top of the install file and you will be fine to run.\ngit clone https://github.com/j3ssie/Osmedeus cd Osmedeus ./install.sh  "
+},
+{
+	"uri": "https://j3ssie.github.io/Osmedeus/usage/",
+	"title": "Usage",
+	"tags": [],
+	"description": "",
+	"content": " If you have no idea what are you doing just type the command below or check out the Advanced Usage\n./osmedeus.py -t example.com  Example Commands # normal routine ./osmedeus.py -t example.com # normal routine but slow speed on subdomain module ./osmedeus.py -t example.com --slow 'subdomain' # direct mode examples ./osmedeus.py -m portscan -i \u0026quot;1.2.3.4/24\u0026quot; ./osmedeus.py -m portscan -I list_of_targets.txt -t result_folder ./osmedeus.py -m \u0026quot;portscan,vulnscan\u0026quot; -i \u0026quot;1.2.3.4/24\u0026quot; -t result_folder ./osmedeus.py -m \u0026quot;assets\u0026quot; -i \u0026quot;example.com\u0026quot; ./osmedeus.py -m \u0026quot;assets,dirb\u0026quot; -i \u0026quot;example.com\u0026quot; # report mode ./osemdeus.py -t example.com --report list ./osemdeus.py -t example.com --report sum ./osemdeus.py -t example.com -m subdomain --report short ./osemdeus.py -t example.com -m \u0026quot;subdomain, portscan\u0026quot; --report full  More options Basic Usage =========== python3 osmedeus.py -t \u0026lt;your_target\u0026gt; python3 osmedeus.py -T \u0026lt;list_of_targets\u0026gt; python3 osmedeus.py -m \u0026lt;module\u0026gt; [-i \u0026lt;input\u0026gt;|-I \u0026lt;input_file\u0026gt;] [-t workspace_name] python3 osmedeus.py --report \u0026lt;mode\u0026gt; -t \u0026lt;workspace\u0026gt; [-m \u0026lt;module\u0026gt;] Advanced Usage ============== [*] List all module python3 osmedeus.py -M [*] List all report mode python3 osmedeus.py --report help [*] Running with specific module python3 osmedeus.py -t \u0026lt;result_folder\u0026gt; -m \u0026lt;module_name\u0026gt; -i \u0026lt;your_target\u0026gt; [*] Example command python3 osmedeus.py -m subdomain -t example.com python3 osmedeus.py -t example.com --slow \u0026quot;subdomain\u0026quot; python3 osmedeus.py -t sample2 -m vuln -i hosts.txt python3 osmedeus.py -t sample2 -m dirb -i /tmp/list_of_hosts.txt Remote Options ============== --remote REMOTE Remote address for API, (default: https://127.0.0.1:5000) --auth AUTH Specify authentication e.g: --auth=\u0026quot;username:password\u0026quot; See your config file for more detail (default: core/config.conf) --client just run client stuff in case you ran the flask server before More options ============== --update Update lastest from git -c CONFIG, --config CONFIG Specify config file (default: core/config.conf) -w WORKSPACE, --workspace WORKSPACE Custom workspace folder -f, --force force to run the module again if output exists -s, --slow \u0026quot;all\u0026quot; All module running as slow mode -s, --slow \u0026quot;subdomain\u0026quot; Only running slow mode in subdomain module --debug Just for debug purpose  "
+},
+{
+	"uri": "https://j3ssie.github.io/Osmedeus/donation/",
+	"title": "Donation",
+	"tags": [],
+	"description": "",
+	"content": " If you love my tools and would like to support my work, please check out some donation methods below.\nVia Opencollective \nVia ZaloPay If you want your name appear on this page just put [Osmedeus] inside your transaction message.\nVia Momo If you want your name appear on this page just put [Osmedeus] inside your transaction message.\n"
+},
+{
+	"uri": "https://j3ssie.github.io/Osmedeus/",
+	"title": "Home",
+	"tags": [],
+	"description": "",
+	"content": "Fully automated offensive security framework for reconnaissance and vulnerability scanning Overview    Page Description     Introduction Overview about Osmedeus   Architecture Understand the architecture of Osmedeus   Showcases Demo some showcases   Installation Guide to Installation   Usage Guide to basic usage   Advanced Guide to advanced usage   Web UI Guide to Web UI access   Common Issues Resolve common issues   Donation Supporting me    "
+},
+{
+	"uri": "https://j3ssie.github.io/Osmedeus/categories/",
+	"title": "Categories",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://j3ssie.github.io/Osmedeus/tags/",
+	"title": "Tags",
+	"tags": [],
+	"description": "",
+	"content": ""
+}]
