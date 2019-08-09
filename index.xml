@@ -23,5 +23,14 @@ Because this API allows executing command on your server so by default it only a
 python3 core/app.py -b 0.0.0.0 -p 5000 --remote  Web UI connect Connect your UI to API Server.</description>
     </item>
     
+    <item>
+      <title>Home</title>
+      <link>https://j3ssie.github.io/Osmedeus/index.html</link>
+      <pubDate>Tue, 30 Jul 2019 22:50:41 +0700</pubDate>
+      
+      <guid>https://j3ssie.github.io/Osmedeus/index.html</guid>
+      <description>Fully automated offensive security framework for reconnaissance and vulnerability scanning Overview    Page Description     Introduction Overview about Osmedeus   Architecture Understand the architecture of Osmedeus   Showcases Demo some showcases   Installation Guide to Installation   Usage Guide to basic usage   Advanced Guide to advanced usage   Web UI Guide to Web UI access   Common Issues Resolve common issues   Donation Supporting me    </description>
+    </item>
+    
   </channel>
 </rss>
