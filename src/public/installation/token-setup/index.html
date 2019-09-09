@@ -9,23 +9,23 @@
 
     <link rel="icon" href="/Osmedeus/images/favicon.png" type="image/png">
 
-    <title>Slack Config :: Osmedeus Documentation</title>
+    <title>Token setup :: Osmedeus Documentation</title>
     <base href="https://j3ssie.github.io/Osmedeus/">
     
-    <link href="/Osmedeus/css/nucleus.css?1568020799" rel="stylesheet">
-    <link href="/Osmedeus/css/fontawesome-all.min.css?1568020799" rel="stylesheet">
-    <link href="/Osmedeus/css/hybrid.css?1568020799" rel="stylesheet">
-    <link href="/Osmedeus/css/featherlight.min.css?1568020799" rel="stylesheet">
-    <link href="/Osmedeus/css/perfect-scrollbar.min.css?1568020799" rel="stylesheet">
-    <link href="/Osmedeus/css/auto-complete.css?1568020799" rel="stylesheet">
-    <link href="/Osmedeus/css/atom-one-dark-reasonable.css?1568020799" rel="stylesheet">
-    <link href="/Osmedeus/css/theme.css?1568020799" rel="stylesheet">
-    <link href="/Osmedeus/css/hugo-theme.css?1568020799" rel="stylesheet">
+    <link href="/Osmedeus/css/nucleus.css?1568025698" rel="stylesheet">
+    <link href="/Osmedeus/css/fontawesome-all.min.css?1568025698" rel="stylesheet">
+    <link href="/Osmedeus/css/hybrid.css?1568025698" rel="stylesheet">
+    <link href="/Osmedeus/css/featherlight.min.css?1568025698" rel="stylesheet">
+    <link href="/Osmedeus/css/perfect-scrollbar.min.css?1568025698" rel="stylesheet">
+    <link href="/Osmedeus/css/auto-complete.css?1568025698" rel="stylesheet">
+    <link href="/Osmedeus/css/atom-one-dark-reasonable.css?1568025698" rel="stylesheet">
+    <link href="/Osmedeus/css/theme.css?1568025698" rel="stylesheet">
+    <link href="/Osmedeus/css/hugo-theme.css?1568025698" rel="stylesheet">
     
-      <link href="/Osmedeus/css/theme-jaeles.css?1568020799" rel="stylesheet">
+      <link href="/Osmedeus/css/theme-jaeles.css?1568025698" rel="stylesheet">
     
 
-    <script src="/Osmedeus/js/jquery-3.3.1.min.js?1568020799"></script>
+    <script src="/Osmedeus/js/jquery-3.3.1.min.js?1568025698"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -52,14 +52,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/Osmedeus/js/lunr.min.js?1568020799"></script>
-<script type="text/javascript" src="/Osmedeus/js/auto-complete.js?1568020799"></script>
+<script type="text/javascript" src="/Osmedeus/js/lunr.min.js?1568025698"></script>
+<script type="text/javascript" src="/Osmedeus/js/auto-complete.js?1568025698"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/j3ssie.github.io\/Osmedeus\/";
     
 </script>
-<script type="text/javascript" src="/Osmedeus/js/search.js?1568020799"></script>
+<script type="text/javascript" src="/Osmedeus/js/search.js?1568025698"></script>
 
     
   </div>
@@ -160,9 +160,9 @@
  
   
     
-      <li data-nav-id="/Osmedeus/installation/token-setup/" title="Slack Config" class="dd-item active">
+      <li data-nav-id="/Osmedeus/installation/token-setup/" title="Token setup" class="dd-item active">
         <a href="/Osmedeus/installation/token-setup/">
-        Slack Config
+        Token setup
         
         </a>
     </li>
@@ -632,7 +632,7 @@
             
           
           
-            <a href='/Osmedeus/'>Home</a> > <a href='/Osmedeus/installation/'>Installation</a> > Slack Config
+            <a href='/Osmedeus/'>Home</a> > <a href='/Osmedeus/installation/'>Installation</a> > Token setup
           
          
           
@@ -649,8 +649,9 @@
 <ul>
 <li>
 <ul>
+<li><a href="#create-slack-token">Create Slack token</a></li>
+<li><a href="#setup-slack-notification-in-osmedeus">Setup Slack notification in Osmedeus</a></li>
 <li><a href="#other-token">Other token</a></li>
-<li><a href="#slack-notification">Slack notification</a></li>
 <li><a href="#update-token-to-db">Update token to db</a></li>
 </ul></li>
 </ul>
@@ -670,7 +671,7 @@
           
             <h1>
               
-              Slack Config
+              Token setup
             </h1>
           
 
@@ -680,16 +681,29 @@
 
 
 
-<h2 id="other-token">Other token</h2>
+<h2 id="create-slack-token">Create Slack token</h2>
 
-<pre><code>export GITHUB_API_KEY=xxx
-</code></pre>
+<p><img src="screenshots/slack-config/slack-config-1.png?classes=border,shadow" alt="slack-1" />
+<p align="center">Create new app on this <a href="https://api.slack.com/apps?new_app=1">page</a></p></p>
 
-<h2 id="slack-notification">Slack notification</h2>
+<p><img src="screenshots/slack-config/slack-config-2.png?classes=border,shadow" alt="slack-2" />
+<p align="center">Add app as a Bot</p></p>
+
+<p><img src="screenshots/slack-config/slack-config-3.png?classes=border,shadow" alt="slack-3" />
+<p align="center">Setup a name or image of your Bot</p></p>
+
+<p><img src="screenshots/slack-config/slack-config-4.png?classes=border,shadow" alt="slack-4" />
+<img src="screenshots/slack-config/slack-config-5.png?classes=border,shadow" alt="slack-5" />
+<p align="center">Install app to your workspace</p></p>
+
+<p><img src="screenshots/slack-config/slack-config-6.png?classes=border,shadow" alt="slack-6" />
+<p align="center">Copy Oauth Access Token</p></p>
+
+<h2 id="setup-slack-notification-in-osmedeus">Setup Slack notification in Osmedeus</h2>
 
 <p>This is optional config, you don&rsquo;t have to do this to get the tools done.</p>
 
-<div class="notices tip" ><p>You can only provide <strong>REPORT_CHANNEL</strong> and <strong>SLACK_BOT_TOKEN</strong> to get less verbose noti.</p>
+<div class="notices tip" ><p>You can only provide <strong>REPORT_CHANNEL</strong> and <strong>SLACK_BOT_TOKEN</strong> to get less verbose notification.</p>
 </div>
 
 <p><strong>STATUS_CHANNEL</strong> is the place to put notifications.</p>
@@ -709,9 +723,14 @@ export STDS_CHANNEL=CGXXXXXXX
 export SLACK_BOT_TOKEN=xoxb-11
 </code></pre>
 
+<h2 id="other-token">Other token</h2>
+
+<pre><code>export GITHUB_API_KEY=xxx
+</code></pre>
+
 <h2 id="update-token-to-db">Update token to db</h2>
 
-<p>Add those line above to your <code>~/.bashrc</code> or <code>~/.zshrc</code> or whatever of yours and run</p>
+<p>Add those line above to your <code>~/.bashrc</code> or <code>~/.zshrc</code> or whatever of yours and <code>source ~/.bashrc</code> then run</p>
 
 <pre><code>python3 scripts/reload.py
 </code></pre>
@@ -1116,20 +1135,20 @@ export SLACK_BOT_TOKEN=xoxb-11
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/Osmedeus/js/clipboard.min.js?1568020799"></script>
-    <script src="/Osmedeus/js/perfect-scrollbar.min.js?1568020799"></script>
-    <script src="/Osmedeus/js/perfect-scrollbar.jquery.min.js?1568020799"></script>
-    <script src="/Osmedeus/js/jquery.sticky.js?1568020799"></script>
-    <script src="/Osmedeus/js/featherlight.min.js?1568020799"></script>
-    <script src="/Osmedeus/js/html5shiv-printshiv.min.js?1568020799"></script>
-    <script src="/Osmedeus/js/highlight.pack.js?1568020799"></script>
+    <script src="/Osmedeus/js/clipboard.min.js?1568025698"></script>
+    <script src="/Osmedeus/js/perfect-scrollbar.min.js?1568025698"></script>
+    <script src="/Osmedeus/js/perfect-scrollbar.jquery.min.js?1568025698"></script>
+    <script src="/Osmedeus/js/jquery.sticky.js?1568025698"></script>
+    <script src="/Osmedeus/js/featherlight.min.js?1568025698"></script>
+    <script src="/Osmedeus/js/html5shiv-printshiv.min.js?1568025698"></script>
+    <script src="/Osmedeus/js/highlight.pack.js?1568025698"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/Osmedeus/js/modernizr.custom-3.6.0.js?1568020799"></script>
-    <script src="/Osmedeus/js/learn.js?1568020799"></script>
-    <script src="/Osmedeus/js/hugo-learn.js?1568020799"></script>
+    <script src="/Osmedeus/js/modernizr.custom-3.6.0.js?1568025698"></script>
+    <script src="/Osmedeus/js/learn.js?1568025698"></script>
+    <script src="/Osmedeus/js/hugo-learn.js?1568025698"></script>
 
-    <link href="/Osmedeus/mermaid/mermaid.css?1568020799" rel="stylesheet" />
-    <script src="/Osmedeus/mermaid/mermaid.js?1568020799"></script>
+    <link href="/Osmedeus/mermaid/mermaid.css?1568025698" rel="stylesheet" />
+    <script src="/Osmedeus/mermaid/mermaid.js?1568025698"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

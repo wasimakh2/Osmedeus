@@ -43,10 +43,10 @@
 },
 {
 	"uri": "https://j3ssie.github.io/Osmedeus/installation/token-setup/",
-	"title": "Slack Config",
+	"title": "Token setup",
 	"tags": [],
 	"description": "",
-	"content": " Other token export GITHUB_API_KEY=xxx  Slack notification This is optional config, you don\u0026rsquo;t have to do this to get the tools done.\nYou can only provide REPORT_CHANNEL and SLACK_BOT_TOKEN to get less verbose noti.\n STATUS_CHANNEL is the place to put notifications.\nREPORT_CHANNEL is the place to put output file.\nLOG_CHANNEL is the place to put command was executed.\nSTDS_CHANNEL is the place to put all stdout.\nSLACK_BOT_TOKEN is bot API or user API token that have permission to access channel above.\nexport LOG_CHANNEL=CGXXXXXX export STATUS_CHANNEL=CGXXXXXX export REPORT_CHANNEL=CGXXXXXX export STDS_CHANNEL=CGXXXXXXX export SLACK_BOT_TOKEN=xoxb-11  Update token to db Add those line above to your ~/.bashrc or ~/.zshrc or whatever of yours and run\npython3 scripts/reload.py  Osmedeus auto pickup these environment variables and add to config file server.conf file\n"
+	"content": " Create Slack token Create new app on this page\nAdd app as a Bot\nSetup a name or image of your Bot\nInstall app to your workspace\nCopy Oauth Access Token\nSetup Slack notification in Osmedeus This is optional config, you don\u0026rsquo;t have to do this to get the tools done.\nYou can only provide REPORT_CHANNEL and SLACK_BOT_TOKEN to get less verbose notification.\n STATUS_CHANNEL is the place to put notifications.\nREPORT_CHANNEL is the place to put output file.\nLOG_CHANNEL is the place to put command was executed.\nSTDS_CHANNEL is the place to put all stdout.\nSLACK_BOT_TOKEN is bot API or user API token that have permission to access channel above.\nexport LOG_CHANNEL=CGXXXXXX export STATUS_CHANNEL=CGXXXXXX export REPORT_CHANNEL=CGXXXXXX export STDS_CHANNEL=CGXXXXXXX export SLACK_BOT_TOKEN=xoxb-11  Other token export GITHUB_API_KEY=xxx  Update token to db Add those line above to your ~/.bashrc or ~/.zshrc or whatever of yours and source ~/.bashrc then run\npython3 scripts/reload.py  Osmedeus auto pickup these environment variables and add to config file server.conf file\n"
 },
 {
 	"uri": "https://j3ssie.github.io/Osmedeus/usage/",

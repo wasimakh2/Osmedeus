@@ -37,18 +37,19 @@ Run osmedeus client Open your tmux or what ever and run on that machine too (rec
     </item>
     
     <item>
-      <title>Slack Config</title>
+      <title>Token setup</title>
       <link>https://j3ssie.github.io/Osmedeus/installation/token-setup/</link>
       <pubDate>Thu, 08 Aug 2019 21:51:02 +0700</pubDate>
       
       <guid>https://j3ssie.github.io/Osmedeus/installation/token-setup/</guid>
-      <description>Other token export GITHUB_API_KEY=xxx  Slack notification This is optional config, you don&amp;rsquo;t have to do this to get the tools done.
-You can only provide REPORT_CHANNEL and SLACK_BOT_TOKEN to get less verbose noti.
- STATUS_CHANNEL is the place to put notifications.
-REPORT_CHANNEL is the place to put output file.
-LOG_CHANNEL is the place to put command was executed.
-STDS_CHANNEL is the place to put all stdout.
-SLACK_BOT_TOKEN is bot API or user API token that have permission to access channel above.</description>
+      <description>Create Slack token Create new app on this page
+Add app as a Bot
+Setup a name or image of your Bot
+Install app to your workspace
+Copy Oauth Access Token
+Setup Slack notification in Osmedeus This is optional config, you don&amp;rsquo;t have to do this to get the tools done.
+You can only provide REPORT_CHANNEL and SLACK_BOT_TOKEN to get less verbose notification.
+ STATUS_CHANNEL is the place to put notifications.</description>
     </item>
     
     <item>
