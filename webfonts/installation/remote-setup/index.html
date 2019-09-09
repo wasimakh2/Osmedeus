@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.55.3" />
+    <meta name="description" content="Fully automated offensive security framework for reconnaissance and vulnerability scanning">
+<meta name="author" content="j3ssie">
+
+    <link rel="icon" href="/Osmedeus/images/favicon.png" type="image/png">
+
+    <title>Remote Setup :: Osmedeus Documentation</title>
+    <base href="https://j3ssie.github.io/Osmedeus/">
+    
+    <link href="/Osmedeus/css/nucleus.css?1565324301" rel="stylesheet">
+    <link href="/Osmedeus/css/fontawesome-all.min.css?1565324301" rel="stylesheet">
+    <link href="/Osmedeus/css/hybrid.css?1565324301" rel="stylesheet">
+    <link href="/Osmedeus/css/featherlight.min.css?1565324301" rel="stylesheet">
+    <link href="/Osmedeus/css/perfect-scrollbar.min.css?1565324301" rel="stylesheet">
+    <link href="/Osmedeus/css/auto-complete.css?1565324301" rel="stylesheet">
+    <link href="/Osmedeus/css/atom-one-dark-reasonable.css?1565324301" rel="stylesheet">
+    <link href="/Osmedeus/css/theme.css?1565324301" rel="stylesheet">
+    <link href="/Osmedeus/css/hugo-theme.css?1565324301" rel="stylesheet">
+    
+      <link href="/Osmedeus/css/theme-jaeles.css?1565324301" rel="stylesheet">
+    
+
+    <script src="/Osmedeus/js/jquery-3.3.1.min.js?1565324301"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="/Osmedeus/installation/remote-setup/">
+    <nav id="sidebar" class="">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <a href="/Osmedeus/"><img src="images/logo.png" /></a>
+<p style="color: #171717;font-size: 1.2em">Osmedeus</p>
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="/Osmedeus/js/lunr.min.js?1565324301"></script>
+<script type="text/javascript" src="/Osmedeus/js/auto-complete.js?1565324301"></script>
+<script type="text/javascript">
+    
+        var baseurl = "https:\/\/j3ssie.github.io\/Osmedeus\/";
+    
+</script>
+<script type="text/javascript" src="/Osmedeus/js/search.js?1565324301"></script>
+
+    
+  </div>
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/Osmedeus/introduction/" title="Introduction" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/Osmedeus/introduction/">
+          Introduction
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/Osmedeus/installation/" title="Installation" class="dd-item 
+        parent
+        
+        
+        ">
+      <a href="/Osmedeus/installation/">
+          Installation
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/Osmedeus/installation/docker-setup/" title="Docker Setup" class="dd-item ">
+        <a href="/Osmedeus/installation/docker-setup/">
+        Docker Setup
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/Osmedeus/installation/remote-setup/" title="Remote Setup" class="dd-item active">
+        <a href="/Osmedeus/installation/remote-setup/">
+        Remote Setup
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/Osmedeus/installation/slack-config/" title="Slack Config" class="dd-item ">
+        <a href="/Osmedeus/installation/slack-config/">
+        Slack Config
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/Osmedeus/usage/" title="Usage" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/Osmedeus/usage/">
+          Usage
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/Osmedeus/advanced/" title="Advanced" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/Osmedeus/advanced/">
+          Advanced
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/Osmedeus/advanced/report-mode/" title="Report Mode" class="dd-item ">
+        <a href="/Osmedeus/advanced/report-mode/">
+        Report Mode
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/Osmedeus/advanced/direct-mode/" title="Direct Mode" class="dd-item ">
+        <a href="/Osmedeus/advanced/direct-mode/">
+        Direct Mode
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/Osmedeus/web-ui/" title="Web UI" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/Osmedeus/web-ui/">
+          Web UI
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/Osmedeus/web-ui/features/" title="Features" class="dd-item ">
+        <a href="/Osmedeus/web-ui/features/">
+        Features
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/Osmedeus/issues/" title="Common Issues" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/Osmedeus/issues/">
+          Common Issues
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/Osmedeus/showcases/" title="Showcases" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/Osmedeus/showcases/">
+          Showcases
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/Osmedeus/architecture/" title="Architecture" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/Osmedeus/architecture/">
+          Architecture
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/Osmedeus/donation/" title="Donation" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/Osmedeus/donation/">
+          Donation
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+         
+    </ul>
+
+    
+    
+      <section id="shortcuts">
+        <h3></h3>
+        <ul>
+          
+              <li> 
+                  <a class="padding" href="https://github.com/j3ssie/Osmedeus"><i class='fab fa-github'></i> Github repo</a>
+              </li>
+          
+              <li> 
+                  <a class="padding" href="https://documenter.getpostman.com/view/7482578/S1a626XR?version=latest"><i class='fas fa-book'></i> API Details</a>
+              </li>
+          
+        </ul>
+      </section>
+    
+
+    
+    <section id="footer">
+      <p>Built with <a href="https://github.com/matcornic/hugo-theme-learn"><i class="fas fa-heart"></i></a> from <a href="https://twitter.com/j3ssiejjj">@j3ssiejjj</a> and <a href="https://gohugo.io/">Hugo</a></p>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/Osmedeus/'>Home</a> > <a href='/Osmedeus/installation/'>Installation</a> > Remote Setup
+          
+         
+          
+         
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#setup-flask-api-server-on-remote-server">Setup Flask API server on remote server.</a></li>
+<li><a href="#web-ui-connect">Web UI connect</a></li>
+<li><a href="#running-osmedeus">Running Osmedeus</a>
+<ul>
+<li><a href="#access-the-remote-server-and-do-screen-or-tmux-then-run">Access the remote server and do screen or tmux then run</a></li>
+</ul></li>
+<li><a href="#beautify-postman-dashboard">Beautify Postman dashboard</a>
+<ul>
+<li><a href="#api-config">API Config</a></li>
+</ul></li>
+<li><a href="#security-concern">Security concern</a></li>
+<li><a href="#others-best-practice">Others best practice</a>
+<ul>
+<li><a href="#create-your-own-certificate">Create your own certificate.</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              Remote Setup
+            </h1>
+          
+
+        
+
+
+
+
+
+<h3 id="setup-flask-api-server-on-remote-server">Setup Flask API server on remote server.</h3>
+
+<p>Allow Web UI access from remote but do not allow run command directly on it.</p>
+
+<pre><code>python3 core/app.py -b 0.0.0.0 -p 5000
+</code></pre>
+
+<p>or</p>
+
+<p>Because this API allows executing command on your server so by default it only allows execute command from localhost so if you specify <code>--remote</code> It&rsquo;s will remove local protection on that API.</p>
+
+<pre><code>python3 core/app.py -b 0.0.0.0 -p 5000 --remote
+</code></pre>
+
+<hr />
+
+<h3 id="web-ui-connect">Web UI connect</h3>
+
+<p><img src="https://user-images.githubusercontent.com/23289085/62712052-50481100-ba24-11e9-893a-1ec1c731951b.png?classes=border,shadow" alt="ui-login" /></p>
+
+<p>Connect your UI to API Server.</p>
+
+<hr />
+
+<h3 id="running-osmedeus">Running Osmedeus</h3>
+
+<p><strong><em>Protips</em></strong>: <code>--auth=&quot;username:password&quot;</code> using this option for custom credentials.</p>
+
+<h4 id="access-the-remote-server-and-do-screen-or-tmux-then-run">Access the remote server and do screen or tmux then run</h4>
+
+<pre><code>./osmedeus.py -t example.com --client
+</code></pre>
+
+<p>or</p>
+
+<pre><code>./osmedeus.py -t example.com --client --remote https://yourserver.com:5000
+</code></pre>
+
+<hr />
+
+<h3 id="beautify-postman-dashboard">Beautify Postman dashboard</h3>
+
+<p>Full API Endpoint will be updated <a href="https://documenter.getpostman.com/view/7482578/S1a626XR?version=latest">here</a>.</p>
+
+<p><img src="https://user-images.githubusercontent.com/23289085/60317344-d0e10f80-9998-11e9-9976-77116ca6e76a.png?classes=border,shadow" alt="Postman Dashboard" /></p>
+
+<p>**<em>Note that <strong>duckduckgo.com</strong> is an example target, replace it depending on your target.</em>**</p>
+
+<h4 id="api-config">API Config</h4>
+
+<p>You gonna need JWT token to reach out the endpoints. But first, we gonna need to define the credentials to verify the authentication process.
+So check out the login <a href="https://documenter.getpostman.com/view/7482578/S1a626XR?version=latest#60fee8fe-4830-4ab5-86af-909b7964305b">API</a> first</p>
+
+<hr />
+
+<h3 id="security-concern">Security concern</h3>
+
+<p><strong><em>Protips</em></strong>: you can access the UI or even the API safe by using ssh forwarding using this command (make sure you&rsquo;re enable <code>GatewayPorts yes</code> in your <code>/etc/ssh/sshd_config</code>)</p>
+
+<pre><code>ssh -L 5000:localhost:5000 root@your_remote_server
+</code></pre>
+
+<p>Because this API allows executing command on your server so <code>@local_only</code> and <code>@jwt_required</code> decorators on core endpoints are really important.</p>
+
+<p>If you wanna run it remote just remove <code>@local_only</code> decorators or run the server with <code>--remote</code> options but make sure you know that are you doing.</p>
+
+<h3 id="others-best-practice">Others best practice</h3>
+
+<p>Make sure change <code>JWT_SECRET_KEY</code> and the CORS origin on <code>core/app.py</code> to where you host the UI.</p>
+
+<pre><code>#just for testing whitelist your domain if you wanna run this server remotely
+cors = CORS(app, resources={r&quot;/*&quot;: {&quot;origins&quot;: &quot;*&quot;}})
+
+...
+
+# setup jwt secret, make sure you change this!
+app.config['JWT_SECRET_KEY'] = '-----BEGIN RSA PRIVATE KEY-----' # go ahead, spider
+
+</code></pre>
+
+<h4 id="create-your-own-certificate">Create your own certificate.</h4>
+
+<p>Navigate to <code>core/certs</code> delete cert.pem and key.pem in this folder and create your own cert by this command below.</p>
+
+<pre><code>openssl req -x509 -newkey rsa:4096 -nodes -out cert.pem -keyout key.pem -days 365
+</code></pre>
+
+
+<footer class=" footline" >
+	
+</footer>
+
+
+        
+        </div> 
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+        
+        
+
+
+	 
+	 
+    </div>
+
+    </section>
+    
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/Osmedeus/js/clipboard.min.js?1565324301"></script>
+    <script src="/Osmedeus/js/perfect-scrollbar.min.js?1565324301"></script>
+    <script src="/Osmedeus/js/perfect-scrollbar.jquery.min.js?1565324301"></script>
+    <script src="/Osmedeus/js/jquery.sticky.js?1565324301"></script>
+    <script src="/Osmedeus/js/featherlight.min.js?1565324301"></script>
+    <script src="/Osmedeus/js/html5shiv-printshiv.min.js?1565324301"></script>
+    <script src="/Osmedeus/js/highlight.pack.js?1565324301"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/Osmedeus/js/modernizr.custom-3.6.0.js?1565324301"></script>
+    <script src="/Osmedeus/js/learn.js?1565324301"></script>
+    <script src="/Osmedeus/js/hugo-learn.js?1565324301"></script>
+
+    <link href="/Osmedeus/mermaid/mermaid.css?1565324301" rel="stylesheet" />
+    <script src="/Osmedeus/mermaid/mermaid.js?1565324301"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    
+
+  </body>
+</html>
+
