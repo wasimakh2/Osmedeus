@@ -14,12 +14,12 @@ draft: false
 
 | Page | Description |
 | ------| -----------|
-| <h4>[Introduction](/introduction/)</h4>  | <h4>Overview about Osmedeus</h4> |
-| <h4>[Architecture](/architecture/)</h4> | <h4>Understand the architecture of Osmedeus</h4> |
-| <h4>[Showcases](/showcases/)</h4> | <h4>Demo some showcases</h4> |
-| <h4>[Installation](/installation/)</h4> | <h4>Guide to Installation</h4> |
-| <h4>[Usage](/usage/)</h4> | <h4>Guide to basic usage</h4> |
-| <h4>[Advanced](/advanced/)</h4> | <h4>Guide to advanced usage</h4> |
-| <h4>[Web UI](/web-ui/)</h4> | <h4>Guide to Web UI access</h4> |
-| <h4>[Common Issues](/issues/)</h4> | <h4>Resolve common issues</h4> |
-| <h4>[Donation](/donation/)</h4>      | <h4>Supporting me</h4> |
+| <h4>[Introduction](/Osmedeus/introduction/)</h4>  | <h4>Overview about Osmedeus</h4> |
+| <h4>[Architecture](/Osmedeus/architecture/)</h4> | <h4>Understand the architecture of Osmedeus</h4> |
+| <h4>[Showcases](/Osmedeus/showcases/)</h4> | <h4>Demo some showcases</h4> |
+| <h4>[Installation](/Osmedeus/installation/)</h4> | <h4>Guide to Installation</h4> |
+| <h4>[Usage](/Osmedeus/usage/)</h4> | <h4>Guide to basic usage</h4> |
+| <h4>[Advanced](/Osmedeus/advanced/)</h4> | <h4>Guide to advanced usage</h4> |
+| <h4>[Web UI](/Osmedeus/web-ui/)</h4> | <h4>Guide to Web UI access</h4> |
+| <h4>[Common Issues](/Osmedeus/issues/)</h4> | <h4>Resolve common issues</h4> |
+| <h4>[Donation](/Osmedeus/donation/)</h4>      | <h4>Supporting me</h4> |

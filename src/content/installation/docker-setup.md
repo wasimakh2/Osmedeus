@@ -1,7 +1,7 @@
 ---
 title: "Docker Setup"
 date: 2019-08-08T21:30:23+07:00
-draft: true
+draft: false
 weight: 1
 ---
 

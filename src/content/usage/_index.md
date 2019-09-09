@@ -7,18 +7,18 @@ weight: 3
 
 If you have no idea what are you doing just type the command below or check out the [Advanced Usage](/advanced/)
 
-```
+```bash
 ./osmedeus.py -t example.com
 ```
 
 ## Example Commands
 
-```
+``` bash
 # normal routine
 ./osmedeus.py -t example.com
 
 # normal routine but slow speed on subdomain module
-./osmedeus.py -t example.com --slow 'subdomain'
+./osmedeus.py -t example.com --slow 'all'
 
 # direct mode examples
 ./osmedeus.py -m portscan -i "1.2.3.4/24"
@@ -26,23 +26,19 @@ If you have no idea what are you doing just type the command below or check out 
 ./osmedeus.py -m portscan -I list_of_targets.txt -t result_folder
 
 ./osmedeus.py -m "portscan,vulnscan" -i "1.2.3.4/24" -t result_folder
-
-./osmedeus.py -m "assets" -i "example.com"
-./osmedeus.py -m "assets,dirb" -i "example.com"
+./osmedeus.py -m "git" -i 'repo:https://github.com/foo/bar'
+./osmedeus.py -m "git" -i 'user:sample'
 
 # report mode
-
 ./osemdeus.py -t example.com --report list
 ./osemdeus.py -t example.com --report sum
-./osemdeus.py -t example.com -m subdomain --report short
-./osemdeus.py -t example.com -m "subdomain, portscan" --report full
-
-
+./osemdeus.py -t example.com --report short
+./osemdeus.py -t example.com --report full
 ```
 
 ## More options
 
-```
+```bash
 Basic Usage
 ===========
 python3 osmedeus.py -t <your_target>

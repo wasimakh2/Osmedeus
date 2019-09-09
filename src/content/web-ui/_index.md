@@ -1,24 +1,28 @@
 ---
 title: "Web UI"
 date: 2019-08-08T21:13:31+07:00
-draft: true
+draft: false
 weight: 5
 ---
 
-{{% notice note %}}
-Note that we're using self-signed certificate so make sure you trust that and access via **HTTPS**.
-{{% /notice %}}
-
-![CA Warning](https://user-images.githubusercontent.com/23289085/62714231-5a6c0e80-ba28-11e9-9f9b-d2b202808cb8.png?classes=border,shadow)
-
-![Login](https://user-images.githubusercontent.com/23289085/62714564-06adf500-ba29-11e9-989d-1bc62b210bde.png?classes=border,shadow)
-
 
 #### Local
-If you're run Osmedeus on the local machine just access https://127.0.0.1:5000 and fill the credentials from your `config.conf` file. (by default, it's on `~/.osmedeus/config.conf`)
+
+![Screen Shot 2019-09-08 at 23 58 54](https://user-images.githubusercontent.com/23289085/64491739-eecec880-d295-11e9-848d-c3e944d98781.png)
+
+
+If you're run Osmedeus on the local machine just access http://127.0.0.1:8000, fill the credentials from your `client.conf` file. (by default, it's on `~/.osmedeus/client.conf`)
+
+You can also create a new one via [Django authentication system](https://docs.djangoproject.com/en/2.2/topics/auth/default/).
+
+```
+python3 server/manage.py createsuperuser
+```
 
 ****
+
 #### Remote
+
 If you're run Osmedeus server and client separately, you gonna need to change **Remote URL** in the login sections on the Web UI.
 
 ![Web UI](https://user-images.githubusercontent.com/23289085/62714373-a1f29a80-ba28-11e9-8acc-afbb47bed6bf.png?classes=border,shadow)

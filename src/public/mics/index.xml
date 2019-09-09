@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mics on Osmedeus Documentation</title>
+    <link>https://j3ssie.github.io/Osmedeus/mics/</link>
+    <description>Recent content in Mics on Osmedeus Documentation</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 09 Sep 2019 11:43:55 +0700</lastBuildDate>
+    
+	<atom:link href="https://j3ssie.github.io/Osmedeus/mics/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Security Concern</title>
+      <link>https://j3ssie.github.io/Osmedeus/mics/security-concern/</link>
+      <pubDate>Mon, 09 Sep 2019 11:43:55 +0700</pubDate>
+      
+      <guid>https://j3ssie.github.io/Osmedeus/mics/security-concern/</guid>
+      <description>Overview Because main feature of Osmedeus is allow execute command on your system so make sure you secure it. If you run default config Osmedeus only can access via your localhost.
+Turn off Debug mode in server/rest/settings.py # SECURITY WARNING: don&#39;t run with debug turned on in production! DEBUG = True  Access remote via SSH tunnel (easiest way) You can also achieve remote access in safe method using SSH.</description>
+    </item>
+    
+  </channel>
+</rss>

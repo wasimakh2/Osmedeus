@@ -1,13 +1,13 @@
 ---
 title: "Features"
 date: 2019-08-08T22:14:29+07:00
-draft: true
+draft: false
 ---
 
-![Web UI](https://raw.githubusercontent.com/j3ssie/Osmedeus/master/imgs/osmedeus-2.png?classes=border,shadow)
+![Web UI](https://raw.githubusercontent.com/j3ssie/Osmedeus/master/imgs/ui-1.png?classes=border,shadow)
 
 
-![Web UI 1](https://raw.githubusercontent.com/j3ssie/Osmedeus/master/imgs/osmedeus-1.png?classes=border,shadow)
+![Web UI 1](https://raw.githubusercontent.com/j3ssie/Osmedeus/master/imgs/ui-3.png?classes=border,shadow)
 <h4 align="center"> View Summary report </h4>
 
 ***

@@ -10,7 +10,7 @@ draft: false
 
 ### For Kali Linux
 
-```
+```bash
 git clone https://github.com/j3ssie/Osmedeus
 cd Osmedeus
 ./install.sh
@@ -20,7 +20,7 @@ cd Osmedeus
 ## For *nix OS
 Change default shell and package manager on top of the install file and you will be fine to run.
 
-```
+```bash
 git clone https://github.com/j3ssie/Osmedeus
 cd Osmedeus
 ./install.sh
@@ -31,7 +31,7 @@ cd Osmedeus
 Install golang [officially](https://golang.org/dl/) or use [homebrew](https://ahmadawais.com/install-go-lang-on-macos-with-homebrew/) and nmap, masscan.
 Change default shell and package manager on top of the install file and you will be fine to run.
 
-```
+```bash
 git clone https://github.com/j3ssie/Osmedeus
 cd Osmedeus
 ./install.sh

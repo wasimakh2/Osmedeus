@@ -5,7 +5,7 @@ draft: false
 weight: 1
 ---
 
-![architechture](screenshots/Osmedeus-architecture.png?classes=border,shadow)
+![architechture](screenshots/osmedeus-architecture.png?classes=border,shadow)
 
 <p align="center">
 Osmedeus allows you automated run the collection of awesome tools to reconnaissance and vulnerability scanning against the target.
@@ -35,7 +35,7 @@ Osmedeus allows you automated run the collection of awesome tools to reconnaissa
 
 ## Demo
 
-[![asciicast](https://asciinema.org/a/230164.svg)](https://asciinema.org/a/230164)
+[![asciicast](https://asciinema.org/a/266599.svg)](https://asciinema.org/a/266599)
 
 ![Slack Noti](https://raw.githubusercontent.com/j3ssie/Osmedeus/master/imgs/slack_noti.png?classes=border,shadow)
 
@@ -43,8 +43,8 @@ Osmedeus allows you automated run the collection of awesome tools to reconnaissa
 
 ![Reports](https://raw.githubusercontent.com/j3ssie/Osmedeus/master/imgs/osmedeus-report.png?classes=border,shadow)
 
-![Web UI 1](https://raw.githubusercontent.com/j3ssie/Osmedeus/master/imgs/osmedeus-1.png?classes=border,shadow)
+![Web UI 1](https://raw.githubusercontent.com/j3ssie/Osmedeus/master/imgs/ui-1.png?classes=border,shadow)
 
-![Web UI 3](https://raw.githubusercontent.com/j3ssie/Osmedeus/master/imgs/osmedeus-3.png?classes=border,shadow)
+![Web UI 3](https://raw.githubusercontent.com/j3ssie/Osmedeus/master/imgs/ui-3.png?classes=border,shadow)
 
-![Web UI 2](https://raw.githubusercontent.com/j3ssie/Osmedeus/master/imgs/osmedeus-2.png?classes=border,shadow)
+![Web UI 2](https://raw.githubusercontent.com/j3ssie/Osmedeus/master/imgs/ui-2.png?classes=border,shadow)
