@@ -4,7 +4,7 @@ date: 2019-07-30T22:50:41+07:00
 draft: false
 ---
 
-![architechture](screenshots/Osmedeus-architecture.png?classes=border,shadow)
+![architechture](https://github.com/j3ssie/Osmedeus/blob/master/imgs/osmedeus-architecture.png?raw=true&classes=border,shadow)
 
 <h4 align="center">Fully automated offensive security framework for reconnaissance and vulnerability scanning</h4>
 

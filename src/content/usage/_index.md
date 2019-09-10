@@ -17,7 +17,7 @@ If you have no idea what are you doing just type the command below or check out 
 # normal routine
 ./osmedeus.py -t example.com
 
-# normal routine but slow speed on subdomain module
+# normal routine but slow speed on all module
 ./osmedeus.py -t example.com --slow 'all'
 
 # direct mode examples
