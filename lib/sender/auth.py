@@ -22,8 +22,7 @@ def login(options):
     except:
         utils.print_bad("Authentication failed at: " + url)
         print('''
-        [!] This might happened by running Osmedeus with sudo but the install process running with normal user
-        You should install the whole Osmedeus and running it with root user.
-        Or whitelist masscan + nmap in sudoers file because it's required sudo permission.
+        [!] This might have happened by running Osmedeus with sudo but the install process running with a normal user.
+        You should install the whole Osmedeus and run it with the root user.
+        Or whitelist masscan + nmap in the sudoers file because it requires sudo permission.
         ''')
-        return False
