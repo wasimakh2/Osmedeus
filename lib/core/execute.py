@@ -9,8 +9,23 @@ from core import utils
 
 
 # just run command directly for simple purpose like update
-def run1(command):
-    os.system(command)
+def run(command):
+    stdout = ''
+    try:
+        process = subprocess.Popen(
+            command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+
+        # Poll process for new output until finished
+        while True:
+            nextline = process.stdout.readline().decode('utf-8')
+            # store output to log file
+            if nextline == '' and process.poll() is not None:
+                break
+            print(nextline, end='')
+            stdout += nextline
+            sys.stdout.flush()
+
+        exitCode = process.returncode
 
 
 # run command in subprocess
