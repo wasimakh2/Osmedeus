@@ -1,7 +1,7 @@
 from rest_framework.response import Response
 
 '''
-Desribe some status code here
+Describe some status code here
 '''
 
 
