@@ -22,7 +22,7 @@ def run(command):
 
         # Poll process for new output until finished
         while True:
-            nextline = process.stdout.readline().decode('utf-8')
+            nextline = process.stdout.readline().decode('utf-8', errors='ignore')
             # store output to log file
             if nextline == '' and process.poll() is not None:
                 break
@@ -40,7 +40,7 @@ def run(command):
             print(command)
             utils.print_line()
             return None
-    except:
+    except Exception as e::
         utils.print_line()
         utils.print_bad('Something went wrong with the command below: ')
         print(command)
