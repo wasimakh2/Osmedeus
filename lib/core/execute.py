@@ -56,6 +56,10 @@ def run_single(command):
         if utils.not_empty_file(command.get('cleaned_output')):
             return True
     std_out = run(command.get('cmd'))
+if command.get('std_path') != '':
+    utils.just_write(command.get('std_path'), std_out)
+if command.get('output_path') != '':
+    utils.check_output(command.get('output_path'))
     # store std and output
     if command.get('std_path') != '':
         utils.just_write(command.get('std_path'), std_out)
